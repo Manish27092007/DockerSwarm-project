@@ -1,26 +1,26 @@
-Version: '3.8'
+version: '3'
 services:
   movies:
-    image: manish27092007/movies:latest
-    ports:
-      - "81:80"
-    deploy:
-        replicas: 3
-  Train:
-     image: manish27092007/train:latest    
-     ports:        
-     - "82:80"
-     deploy:       
-      replicas: 3
+  image: manish27092007/movies:latest
+  ports:
+    - "81:80"
+  deploy:
+    replicas: 3
+  train:
+  image: manish27092007/train:latest
+  ports:
+    - "82:80"
+  deploy:
+    replicas: 3
   dht:
-    image: manish27092007/dht:latest     
-    ports:        
-    - "83:80"      
-    deploy:
-        replicas: 3
-    Recharge:
-       image: manish27092007/recharge:latest     
-       ports:       
-       - "84:80"     
-       deploy:
-        replicas: 3   
+  image: manish27092007/dht:latest
+  ports:
+    - "83:80"
+  deploy:
+    replicas: 3
+  recharge:
+  image: manish27092007/recharge:latest
+  ports:
+    - "84:80"
+  deploy:
+    replicas: 3
